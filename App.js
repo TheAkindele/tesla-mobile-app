@@ -1,11 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, FlatList, View, Scroll } from 'react-native';
+import CarItem from "./components/carFolder/CarItem"
+import {carArr} from "./carsData"
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>We are ready yeah!</Text>
+      <FlatList
+        data={carArr}
+        renderItem={({item}) => <CarItem carDetails={item} />}
+        keyExtractor={(item) => item.id.toString()}
+      />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,9 +19,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: "100%",
+    height: "100%"
   },
 });

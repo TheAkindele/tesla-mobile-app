@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Text, ImageBackground, StatusBar, Dimensions} from 'react-native'
+import { View, Text, ImageBackground, Dimensions} from 'react-native'
 import {styles} from "./carStyle"
 import {Button} from "../buttonFolder/Button"
+import {Navbar} from "../navFolder/Navbar"
 
 const CarItem = ({carDetails}) => {
     const {model, image, price} = carDetails
@@ -15,6 +16,7 @@ const CarItem = ({carDetails}) => {
     return (
         <View style={[styles.carContainer, {height: screenHeight, width: windowWidth}]}>
             <ImageBackground source={image} style={styles.carImage}>
+                <Navbar />
                 <View style={styles.innerCont}>
                     <Text style={styles.title}>{model}</Text>
                     <Text tyle={styles.subTitle}>Starting at {" "} 

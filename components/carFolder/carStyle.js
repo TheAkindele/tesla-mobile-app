@@ -2,6 +2,7 @@ import {StyleSheet} from "react-native"
 
 export const styles = StyleSheet.create({
     carContainer: {
+        
     },
     carImage: {
         width: "100%",
@@ -24,5 +25,13 @@ export const styles = StyleSheet.create({
     },
     price: {
         color: "red",
+    },
+    btnCont: {
+        position: "absolute",
+        bottom: "7%",
+        width: "100%",
+        height: "15%",
+        justifyContent: "space-around",
+        alignItems: "center"
     }
 })

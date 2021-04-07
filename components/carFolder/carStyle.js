@@ -2,11 +2,12 @@ import {StyleSheet} from "react-native"
 
 export const styles = StyleSheet.create({
     carContainer: {
-        
+        position: "relative",
     },
     carImage: {
         width: "100%",
         height: "100%",
+        position: "relative",
     },
     innerCont: {
         width: "100%",
